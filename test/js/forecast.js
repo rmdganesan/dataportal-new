@@ -35,6 +35,7 @@ require([
         }],
         yAxis: [{
             type: 'value',
+            show: false
 
         }],
         series: [{
@@ -92,7 +93,7 @@ require([
         ]
     };
 
-    chart_priceperferrell = myChart = testHelper.create(echarts, 'forecast', {
+    myChart = testHelper.create(echarts, 'forecast', {
         option: option,
         height: 400,
         // title: 'Labor Migration Top5 (2017)'

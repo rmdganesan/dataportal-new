@@ -377,6 +377,8 @@
     <script src="data/data.js "></script>
 <script src="js/map_options.js "></script>
 <script src="data.js "></script>
+<script src="js/bar-chart-data.js "></script>
+
 
 
 
@@ -465,6 +467,9 @@ change:function(event, ui) {
             mapObject.series.regions[0].setValues(data.world[ui.value]);
             mapObject.series.markers[0].setValues(data.countries.production[ui.value]);
             mapObject.series.markers[1].setValues(data.countries.production[ui.value]);
+                               changeBarChart(val-1);
+                             changePriceLineChart(val-1);
+
  }
             });
         });

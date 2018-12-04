@@ -34,6 +34,16 @@
 
  });
 
- function change() {
-     alert('hi');
+ function changeEvent(yearIndex) {
+     alert(yearIndex);
+ }
+
+
+
+ function changeOilData(yearIndex) {
+     // alert(yearIndex);
+ }
+
+ function changeEvent(yearIndex) {
+     // alert(yearIndex);
  }

@@ -125,9 +125,19 @@ require([
         ]
     };
 
-    chart_priceperferrell = myChart = testHelper.create(echarts, 'bar-chart', {
+    bar_chart = testHelper.create(echarts, 'bar-chart', {
         option: option,
         height: 300,
         // title: 'Labor Migration Top5 (2017)'
     });
 });
+
+function changeBarChart(yearIndex) {
+
+    option_info = bar_chart.getOption();
+    option_info.yAxis[0].data = country[yearIndex];
+    option_info.series[0].data = production[yearIndex];
+    // alert(country[yearIndex] + '  ' + production[yearIndex]);
+    bar_chart.setOption(option_info, true);
+    // alert(yearIndex);
+}
