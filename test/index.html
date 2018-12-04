@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KAPSARC : - Dataportal</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" media="all" href="jquery-jvectormap-2.0.3.css" />
+    <link rel="stylesheet" media="all" href="jquery-ui.min.css" />
+
+    <link href="style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/ticker.css">
+    <style>
+        .progress {
+            height: 3em;
+            width: 100%;
+            background-color: #c9c9c9;
+            position: relative;
+            border-radius: 0;
+        }
+        
+        .progress:before {
+            content: attr(data-label);
+            position: absolute;
+            text-align: center;
+            top: 25%;
+            left: 0;
+            right: 0;
+        }
+        
+        .progress .value {
+            background-color: #17a2b8;
+            display: inline-block;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="colorlib-load"></div>
+    </div>
+
+    <!-- ***** Wellcome Area End ***** -->
+
+    <!-- ***** Special Area Start ***** -->
+    <!--section class="special-area bg-white section_padding_100" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Labor Market Dashboard</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <div class="single-special text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="single-icon">
+                            <i class="ti-mobile" aria-hidden="true"></i>
+                        </div>
+                        <h4>Labor Market Dashboard</h4>
+                        <p>We build pretty complex tools and this allows us to take designs and turn them into functional quickly and easily</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section -->
+    <!-- ***** Special Area End ***** -->
+    <!-- ***** Awesome Features Start ***** -->
+    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="features">
+        <div class="container" style="max-width:100%;">
+            <div class="row" style="left:-20px">
+                <div class="col-12 col-sm-6 col-lg-9 ">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="world-map-markers" style="height:600px;"></div>
+                        </div>
+                    </div>
+                    <!-- <div class="row" style="    margin-top: -80px;"-->
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="replyNumber">No Sec</label>
+                            <input type="number" id="replyNumber" style="width:50px" />
+                        </div>
+                        <div class="col-2">
+                            <div class="container">
+                                <div class="player text-center" style="width: 117%;">
+                                    <button type="button" id="button_first" class="btn">
+                                        <i class="fa fa-fast-backward"></i>
+                                    </button>
+                                    <button type="button" id="button_play">
+                                        <i class="fa fa-play"></i>
+                                    </button>
+                                    <button type="button" id="button_last" class="btn">
+                                        <i class="fa fa-fast-forward"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="slider" style="width: 100%; margin: 10px"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="row" style="height: 10%;">
+                        <div class="col-9">
+                            <div class="section-heading text-center">
+                                <h2 style="    margin-top: 10px;    font-size: 20px;">Global Oil Dashboard</h2>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <img width="40" height="40" src="https://pbs.twimg.com/profile_images/1044515810226638848/5i2oESYk_bigger.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12" id="bar-chart" style="height: 50%;"></div>
+                    <nav class="navbar   navbar-light" style="background-color: #e3f2fd;">
+                        <a> 2008 - Top Event</a>
+                    </nav>
+                    <div class="col-12" style="height:30%;     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important  ">
+                        <ul class="list-aggregate" id="marquee-vertical" style="padding-left:10px">
+                            <li>
+                                <a href="">Breaking News 1</a>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </li>
+                            <li>
+                                <a href="">Breaking News 2</a>
+                                <p>Aliquam consequat nibh in sollicitudin semper. Nam convallis sapien nisi, ac vulputate nisi auctor blandit. Donec tincidunt varius suscipit. </p>
+                            </li>
+                            <li>
+                                <a href="">Breaking News 3</a>
+                                <p>Ut ut felis suscipit sem porta molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae/p>
+                            </li>
+                            <li>
+                                <a href="" title="">Breaking News 4</a>
+                                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--div class="container">
+                    <div class="row">
+                    
+                    
+                        <div class="col">
+                            <div class="progress" data-label="Russia 487 (68%)">
+                                <span class="value" style="width:48%;"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress" data-label="Sausi Arabia 687 (68%) ">
+                                <span class="value" style="width:50%;"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress" data-label="USA 325 (32%)">
+                                <span class="value" style="width:32%;"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress" data-label="Iran 431 (40%)">
+                                <span class="value" style="width:40%;"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress" data-label="China 11 (11%)">
+                                <span class="value" style="width:11%;"></span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="progress" data-label="UAE 7 (7%)">
+                                <span class="value" style="width:7%;"></span>
+                            </div>
+                        </div>
+                    </div>
+            </div -->
+            <div class="row">
+                <div class="col-9">
+                    <!-- Heading Text -->
+                    <div id="oildata" style="height: 400px; width:100%">
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div id="forecast" style="height: 400px;">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- ***** Awesome Features End ***** -->
+
+
+    <!-- ***** App Screenshots Area Start ***** -->
+    <!--section class="app-screenshots-area bg-white section_padding_0_100 clearfix" id="screenshot">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-heading">
+                        <h2>App Screenshots</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="app_screenshots_slides owl-carousel">
+                        <div class="single-shot">
+                            <img src="img/scr-img/app-1.jpg" alt="">
+                        </div>
+                        <div class="single-shot">
+                            <img src="img/scr-img/app-2.jpg" alt="">
+                        </div>
+                        <div class="single-shot">
+                            <img src="img/scr-img/app-3.jpg" alt="">
+                        </div>
+                        <div class="single-shot">
+                            <img src="img/scr-img/app-4.jpg" alt="">
+                        </div>
+                        <div class="single-shot">
+                            <img src="img/scr-img/app-5.jpg" alt="">
+                        </div>
+                        <div class="single-shot">
+                            <img src="img/scr-img/app-3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section -->
+
+
+
+
+    <section class="footer-contact-area section_padding_100 clearfix" id="contact" style="display:none">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <h2>Get in touch with us!</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                    <div class="footer-text">
+                        <p>We'll send you epic weekly blogs, whitepapers and things to make your app startup thrive, all FREE!</p>
+                    </div>
+                    <div class="address-text">
+                        <p><span>Address:</span> King Abdullah Petroleum Studies and Research Center</p>
+                    </div>
+                    <div class="phone-text">
+                        <p><span>Phone:</span> +966 11 225 1064</p>
+                    </div>
+                    <div class="email-text">
+                        <p><span>Email:</span> info@kapsarc.org</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Form Start-->
+                    <div class="contact_from">
+                        <form action="#" method="post">
+                            <!-- Message Input Area Start -->
+                            <div class="contact_input_area">
+                                <div class="row">
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Your E-mail" required>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Your Message *" required></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-12">
+                                        <button type="submit" class="btn submit-btn">Send Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Message Input Area End -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-social-icon text-center section_padding_70 clearfix" style="display:none;>
+        <!-- footer logo -->
+        <div class=" footer-text ">
+        <h2><img class="avatar js-action-profile-avatar " width="40 " height="40 " src="https://pbs.twimg.com/profile_images/1044515810226638848/5i2oESYk_bigger.jpg "
+                alt=" "></h2>
+        </div>
+        <!-- social icon-->
+        <div class="footer-social-icon ">
+            <a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a>
+            <a href="# "><i class="active fa fa-twitter " aria-hidden="true "></i></a>
+            <a href="# "> <i class="fa fa-instagram " aria-hidden="true "></i></a>
+            <a href="# "><i class="fa fa-google-plus " aria-hidden="true "></i></a>
+        </div>
+        <div class="footer-menu ">
+            <nav>
+                <ul>
+                    <li><a href="# ">About</a></li>
+                    <li><a href="# ">Terms &amp; Conditions</a></li>
+                    <li><a href="# ">Privacy Policy</a></li>
+                    <li><a href="# ">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Foooter Text-->
+        <div class="copyright-text ">
+            <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
+            <p>Copyright ©2018 KAPSARC. Designed by <a href="https://kapsarc.org " target="_blank ">KAPSARC</a></p>
+        </div>
+    </footer>
+    <!-- ***** Footer Area Start ***** -->
+
+    <!-- Jquery-2.2.4 JS -->
+    <script src="js/jquery-2.2.4.min.js "></script>
+    <script type="text/javascript " src="js/jquery.marquee.js "></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js "></script>
+    <!-- Bootstrap-4 Beta JS -->
+    <script src="js/bootstrap.min.js "></script>
+ 
+
+<script src="jquery-jvectormap-2.0.3.min.js "></script>
+<script src="jquery-jvectormap-us-aea-en.js "></script>
+<script src="jquery-ui.min.js "></script>
+<script src="jquery-jvectormap-world-mill.js "></script>
+
+    <script src="lib/esl.js "></script>
+    <script src="lib/config.js "></script>
+    <script src="build/lib/testHelper.js "></script>
+    <script src="js/forecast.js "></script>
+<script src="js/oildata.js "></script>
+<script src="js/bar-chart.js "></script>
+
+
+<!--script src="js/line.js "></script-->
+    <!-- All Plugins JS -->
+    <script src="js/plugins.js "></script>
+    <!-- Slick Slider Js-->
+    <script src="js/slick.min.js "></script>
+    <!-- Footer Reveal JS -->
+    <script src="js/footer-reveal.min.js "></script>
+
+    <!-- Active JS -->
+    <script src="js/active.js "></script>
+    <script src="js/ticker.js "></script>
+    <script src="data/data.js "></script>
+<script src="js/map_options.js "></script>
+<script src="data.js "></script>
+
+
+
+</body>
+
+<script>
+    $(function () {
+        $.getJSON('data_oil.json', function (data) {
+            var val = 1;
+            worldValues = jvm.values.apply({}, jvm.values(data.world)),
+                countryProdValues = Array.prototype.concat.apply([], jvm.values(data.countries.production)),
+                //metroUnemplValues = Array.prototype.concat.apply([], jvm.values(data.metro.unemployment));
+$('#world-map-markers').vectorMap({
+                    map: 'world_mill',
+                    markers: data.countries.coords,
+                    backgroundColor: 'white',
+                    regionsSelectable: true,
+                    markersSelectable: true,
+                    regionStyle: {
+                        initial: {
+                            fill: '#d2d6de'
+                        },
+                        selected: {
+                            fill: '#F4A582'
+                        }
+                    },
+                    series: {
+
+                        markers: [{
+                            attribute: 'fill',
+                            scale: ['#FEE5D9', '#A50F15'],
+                            values: data.countries.production[val],
+                            min: jvm.min(countryProdValues),
+                            max: jvm.max(countryProdValues)
+                        }, {
+                            attribute: 'r',
+                            scale: [5, 20],
+                            values: data.countries.production[val],
+                            min: jvm.min(countryProdValues),
+                            max: jvm.max(countryProdValues)
+                        }],
+                        regions: [{
+                            scale: ['#FFFFFF', '#697477'],
+                            attribute: 'fill',
+                            values: data.world[val],
+                            min: jvm.min(worldValues),
+                            max: jvm.max(worldValues)
+                        }]
+                    },
+                    onMarkerLabelShow: function (event, label, index) {
+                        label.html(
+                            '<b>' + data.countries.names[index] + '</b><br/>' +
+                            '<b>Production: </b>' + data.countries.production[val][index] +
+                            '</br>' +
+                            '%'
+                        );
+                    },
+                    onMarkerTipShow: function (e, el, index) {
+                        //alert(code);
+                        el.html(el.html() + data.countries.names[index] + " " + data.countries
+                            .production[val][index] + " (k) bbl/d ");
+                    },
+                    onRegionLabelShow: function (event, label, code) {
+                        alert(data.world[val][code]);
+                        label.html(
+                            '<b>' + label.html() + '</b></br>' +
+                            '<b>Production: </b>' + data.world[val][code] + '%'
+                        );
+                    }
+                });
+var mapObject = $('#world-map-markers').vectorMap('get', 'mapObject');
+            $(".slider ").slider({
+                value: val,
+                min: 1,
+                max: 464,
+                step: 1,
+                auto: true,
+                slide: function (event, ui) {
+                    val = ui.value;
+                    mapObject.series.regions[0].setValues(data.world[ui.value]);
+                    mapObject.series.markers[0].setValues(data.countries.production[ui.value]);
+                    mapObject.series.markers[1].setValues(data.countries.production[ui.value]);
+                },
+change:function(event, ui) {
+            val = ui.value;
+            mapObject.series.regions[0].setValues(data.world[ui.value]);
+            mapObject.series.markers[0].setValues(data.countries.production[ui.value]);
+            mapObject.series.markers[1].setValues(data.countries.production[ui.value]);
+ }
+            });
+        });
+    })
+</script>
+<script>
+    
+    var map;
+    var countryCode = ["QA ", "AN ", "LB ", "AL ", "GB ", "NO ", "KW ", "NA ", "IQ ", "CA ", "AE ", "VE ", "MX ", "CN ", "IR ", "US ",
+        "SA ", "RU "
+    ];
+    var oilProd_1 = [502, 150, 2103, 1306, 1609, 531.8, 2216, 2147, 3336, 1507, 1740, 2281, 1721, 2095, 2605, 8675.5,
+        9767, 11570
+    ];
+
+    $(function () {
+        // $('#marquee-horizontal').marquee({direction:'horizontal', delay:0, timing:50});  
+
+        $('#marquee-vertical').marquee();
+
+        $("#play ").click(function () {
+            //alert(map.series.markers[0].values[0]);					 
+            $.each(dateArray, function (i, m) {
+
+                setTimeout(function () {
+                    var a = eval(m);
+                    oilProd_1 = a;
+
+                    var b = eval(circleArray[i]);
+                    y1980_1 = b;
+                }, 500 * i);
+
+            });
+        });
+    });
+    
+
+
+</script>
+
+
+</html>
