@@ -87,8 +87,23 @@
                     <!-- <div class="row" style="    margin-top: -80px;"-->
                     <div class="row">
                         <div class="col-2">
-                            <label for="replyNumber">No Sec</label>
-                            <input type="number" id="replyNumber" style="width:50px" />
+                        <label for="replyNumber">Year:<span class='year_name'>1980</span> </label>
+                            <!--label for="replyNumber">No Sec</label>
+                            <select  id="no_sec" style="width:50px">
+                                <option value="500">0.5</option>
+                                <option value="1000">1</option>
+                                <option value="2000">2</option>
+                                <option value="3000" selected>3</option>
+                                <option value="4000">4</option>
+                                <option value="5000">5</option>
+                                <option value="6000">6</option>
+                                <option value="7000">7</option>
+                                <option value="8000">8</option>
+                                <option value="9000">9</option>
+                                <option value="10000">10</option>
+                                <option value="12000">11</option>
+                                <option value="12000">12</option>
+                            </select -->
                         </div>
                         <div class="col-2">
                             <div class="container">
@@ -123,28 +138,27 @@
                     </div>
                     <div class="col-12" id="bar-chart" style="height: 50%;"></div>
                     <nav class="navbar   navbar-light" style="background-color: #e3f2fd;">
-                        <a> 2008 - Top Event</a>
+                        <a> <span class='year_name'>1980</span> - Top Event</a>
                     </nav>
                     <div class="col-12" style="height:30%;     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important  ">
                         <ul class="list-aggregate" id="marquee-vertical" style="padding-left:10px">
                             <li>
-                                <a href="">Breaking News 1</a>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
+                                <a href="" id="event1">Saudi Aramco reverts to state ownership</a>
+                                <p> </p>
                             </li>
                             <li>
-                                <a href="">Breaking News 2</a>
-                                <p>Aliquam consequat nibh in sollicitudin semper. Nam convallis sapien nisi, ac vulputate nisi auctor blandit. Donec tincidunt varius suscipit. </p>
-                            </li>
+                                <a href="" id="event2">Supply shock</a>
+ <p> </p>                            </li>
                             <li>
-                                <a href="">Breaking News 3</a>
-                                <p>Ut ut felis suscipit sem porta molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae/p>
-                            </li>
+                                <a href="" id="event3">Collapse of OPEC's  pricing structure</a>
+ <p> </p>                            </li>
                             <li>
-                                <a href="" title="">Breaking News 4</a>
-                                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In hac habitasse platea dictumst. </p>
-                            </li>
+                                <a href="" title="" id="event4">&nbsp;</a>
+ <p> </p>                            </li>
+
+ <li>
+                                <a href="" title="" id="event5"> &nbsp;</a>
+ <p> </p>                            </li>
                         </ul>
                     </div>
                 </div>
@@ -358,6 +372,8 @@
     <script src="lib/esl.js "></script>
     <script src="lib/config.js "></script>
     <script src="build/lib/testHelper.js "></script>
+    <script src="js/month_year.js "></script>
+    <script src="js/event.js "></script>
     <script src="js/forecast.js "></script>
 <script src="js/oildata.js "></script>
 <script src="js/bar-chart.js "></script>
@@ -385,6 +401,7 @@
 </body>
 
 <script>
+
     $(function () {
         $.getJSON('data_oil.json', function (data) {
             var val = 1;
@@ -467,13 +484,16 @@ change:function(event, ui) {
             mapObject.series.regions[0].setValues(data.world[ui.value]);
             mapObject.series.markers[0].setValues(data.countries.production[ui.value]);
             mapObject.series.markers[1].setValues(data.countries.production[ui.value]);
-                               changeBarChart(val-1);
-                             changePriceLineChart(val-1);
+                            changeBarChart(val-1);
+                            changePriceLineChart(val-1);
+                            updateyearMonth(val-1);
+                            updateEvent(val-1);
 
  }
             });
         });
     })
+    
 </script>
 <script>
     

@@ -127,7 +127,7 @@ require([
         ]
     };
 
-    chart_priceperferrell = myChart = testHelper.create(echarts, 'oildata', {
+    chart_priceperbarrel = myChart = testHelper.create(echarts, 'oildata', {
         option: option,
         height: 400,
         // title: 'Labor Migration Top5 (2017)'
@@ -135,11 +135,45 @@ require([
 });
 /* Update the line chart */
 function changePriceLineChart(yearIndex) {
-    //option_info = bar_chart.getOption();
-    //option_info.yAxis[0].data = country[yearIndex];
-    //option_info.series[0].data = production[yearIndex];
-    // alert(country[yearIndex] + '  ' + production[yearIndex]);
-    //bar_chart.setOption(option_info, true);
-    // alert(yearIndex);
+    option_info = chart_priceperbarrel.getOption();
+    if (yearIndex <= 454) {
+        var start = (yearIndex) * (100 / 464);
+        option_info.dataZoom[0].start = start;
+        option_info.dataZoom[0].end = start + 9;
+
+    } else {
+        start = 91;
+        option_info.dataZoom[0].start = start;
+        option_info.dataZoom[0].end = start + 9;
+    }
+    chart_priceperbarrel.setOption(option_info, true);
+}
+
+function updateyearMonth(yearIndex) {
+    $('.month_name').html(month_year[yearIndex].month);
+    $('.year_name').html(month_year[yearIndex].year);
+
+}
+
+function updateEvent(yearIndex) {
+    var year = month_year[yearIndex].year;
+
+    var news = event[year];
+    $("#marquee-vertical").empty()
+    if (news[0] !== undefined)
+        $("#marquee-vertical").append('<li><a href = "" id = "event1" > ' + news[0] + ' </a> <p> </p> </li>');
+    if (news[1] !== undefined)
+        $("#marquee-vertical").append('<li><a href = "" id = "event2" > ' + news[1] + ' </a> <p> </p> </li>');
+    if (news[2] !== undefined)
+        $("#marquee-vertical").append('<li><a href = "" id = "event3" > ' + news[2] + ' </a> <p> </p> </li>');
+    if (news[3] !== undefined)
+        $("#marquee-vertical").append('<li><a href = "" id = "event4" > ' + news[3] + ' </a> <p> </p> </li>');
+    if (news[4] !== undefined)
+        $("#marquee-vertical").append('<li><a href = "" id = "event5" > ' + news[4] + ' </a> <p> </p> </li>');
+    if (news[5] !== undefined)
+        $("#marquee-vertical").append('<li><a href = "" id = "event6" > ' + news[5] + ' </a> <p> </p> </li>');
+
+
+
 
 }

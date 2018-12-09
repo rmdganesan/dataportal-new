@@ -16,6 +16,9 @@ require([
 
 
     var option = {
+        title: {
+            text: '1980 January - Top 10 Production country',
+        },
 
         color: ['#17a2b8', '#006699', '#4cabce', '#e5323e'],
         tooltip: {
@@ -137,7 +140,9 @@ function changeBarChart(yearIndex) {
     option_info = bar_chart.getOption();
     option_info.yAxis[0].data = country[yearIndex];
     option_info.series[0].data = production[yearIndex];
+    option_info.title[0].text = month_year[yearIndex].year + ' ' + month_year[yearIndex].month + '  - Top 10 Production country';
     // alert(country[yearIndex] + '  ' + production[yearIndex]);
     bar_chart.setOption(option_info, true);
+
     // alert(yearIndex);
 }
