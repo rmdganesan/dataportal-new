@@ -138,8 +138,17 @@ require([
 function changeBarChart(yearIndex) {
 
     option_info = bar_chart.getOption();
+    debugger;
+    data = option_info.series[0].data;
+    yMax = Math.max.apply(null, production[yearIndex]);
+    dataShadow = [];
+    for (var i = 0; i < data.length; i++) {
+        dataShadow.push(yMax);
+    }
     option_info.yAxis[0].data = country[yearIndex];
-    option_info.series[0].data = production[yearIndex];
+    option_info.series[0].data = dataShadow;
+    option_info.series[1].data = production[yearIndex];
+    console.log(production[yearIndex]);
     option_info.title[0].text = month_year[yearIndex].year + ' ' + month_year[yearIndex].month + '  - Top 10 Production country';
     // alert(country[yearIndex] + '  ' + production[yearIndex]);
     bar_chart.setOption(option_info, true);

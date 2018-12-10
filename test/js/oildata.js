@@ -161,17 +161,17 @@ function updateEvent(yearIndex) {
     var news = event[year];
     $("#marquee-vertical").empty()
     if (news[0] !== undefined)
-        $("#marquee-vertical").append('<li><a href = "" id = "event1" > ' + news[0] + ' </a> <p> </p> </li>');
+        $("#marquee-vertical").append('<li class="list-group-item">' + news[0] + '  </li>');
     if (news[1] !== undefined)
-        $("#marquee-vertical").append('<li><a href = "" id = "event2" > ' + news[1] + ' </a> <p> </p> </li>');
+        $("#marquee-vertical").append('<li class="list-group-item">' + news[1] + '  </li>');
     if (news[2] !== undefined)
-        $("#marquee-vertical").append('<li><a href = "" id = "event3" > ' + news[2] + ' </a> <p> </p> </li>');
+        $("#marquee-vertical").append('<li class="list-group-item">' + news[2] + '  </li>');
     if (news[3] !== undefined)
-        $("#marquee-vertical").append('<li><a href = "" id = "event4" > ' + news[3] + ' </a> <p> </p> </li>');
+        $("#marquee-vertical").append('<li class="list-group-item">' + news[3] + '  </li>');
     if (news[4] !== undefined)
-        $("#marquee-vertical").append('<li><a href = "" id = "event5" > ' + news[4] + ' </a> <p> </p> </li>');
+        $("#marquee-vertical").append('<li class="list-group-item">' + news[4] + '  </li>');
     if (news[5] !== undefined)
-        $("#marquee-vertical").append('<li><a href = "" id = "event6" > ' + news[5] + ' </a> <p> </p> </li>');
+        $("#marquee-vertical").append('<li class="list-group-item">' + news[5] + '  </li>');
 
 
 

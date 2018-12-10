@@ -8,6 +8,7 @@
 :: Created: 11/03/2017
 -------------------------- */
 
+
 /* --- [Master Stylesheet] ----
 :: 1.0 Base CSS Start
 :: 2.0 Header Area CSS
@@ -108,7 +109,7 @@ h6 {
 
 .section_padding_0_50 {
     padding-top: 0;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 
 img {
@@ -227,17 +228,16 @@ p {
     margin-top: 0;
 }
 
-.heading-text > p {
+.heading-text>p {
     font-size: 16px;
 }
 
-.section-heading > h2 {
+.section-heading>h2 {
     font-weight: 300;
     color: #5b32b4;
     font-size: 48px;
     margin: 0;
 }
-
 
 .section-heading {
     margin-bottom: 60px;
@@ -319,6 +319,7 @@ p {
     }
 }
 
+
 /* --------------------------
 :: 2.0 Header Area CSS
 -------------------------- */
@@ -341,12 +342,10 @@ p {
     padding: 0;
 }
 
-
 .menu_area .navbar-brand:hover,
 .menu_area .navbar-brand:focus {
     color: #fff;
 }
-
 
 .menu_area {
     position: relative;
@@ -365,8 +364,7 @@ p {
     padding: 35px 15px;
 }
 
-
-.menu_area nav ul li > a:hover {
+.menu_area nav ul li>a:hover {
     color: #fb397d;
 }
 
@@ -374,7 +372,7 @@ p {
     text-align: right;
 }
 
-.sing-up-button > a {
+.sing-up-button>a {
     color: #fff;
     font-weight: 500;
     display: inline-block;
@@ -386,7 +384,7 @@ p {
     border-radius: 24px 24px 24px 0px;
 }
 
-.sing-up-button > a:hover {
+.sing-up-button>a:hover {
     background: #fb397d;
     color: #fff;
     border-color: transparent;
@@ -395,12 +393,13 @@ p {
     transition-duration: 500ms;
 }
 
+
 /* stcicky css */
 
 .header_area.sticky {
     background-color: #fff;
     -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     height: 70px;
     position: fixed;
     top: 0;
@@ -414,6 +413,7 @@ p {
 .header_area.sticky .menu_area #nav .nav-link {
     padding: 23px 15px;
 }
+
 .header_area.sticky .navbar {
     padding: 0;
 }
@@ -455,7 +455,7 @@ p {
     width: 100%;
 }
 
-.wellcome-heading > h2 {
+.wellcome-heading>h2 {
     font-size: 100px;
     color: #ffffff;
     font-weight: 700;
@@ -520,11 +520,11 @@ p {
     transition-duration: 500ms;
 }
 
-.wellcome-heading > p {
+.wellcome-heading>p {
     color: #fff;
 }
 
-.wellcome-heading > h3 {
+.wellcome-heading>h3 {
     font-size: 332px;
     position: absolute;
     top: -134px;
@@ -540,16 +540,17 @@ p {
     margin-bottom: 100px;
 }
 
+
 /* --------------------------
 :: 4.0 Special Area CSS
 -------------------------- */
 
-.single-icon > i {
+.single-icon>i {
     font-size: 36px;
     color: #fb397d;
 }
 
-.single-special > h4 {
+.single-special>h4 {
     font-size: 22px;
     color: #5b32b4;
 }
@@ -558,7 +559,7 @@ p {
     margin-bottom: 25px;
 }
 
-.single-special > h4 {
+.single-special>h4 {
     font-size: 22px;
     color: #5b32b4;
     margin-bottom: 15px;
@@ -574,7 +575,7 @@ p {
     margin-bottom: 30px;
 }
 
-.special_description_content > h2 {
+.special_description_content>h2 {
     color: #5b32b4;
     font-size: 48px;
     margin-bottom: 30px;
@@ -582,7 +583,7 @@ p {
 
 .single-special:hover {
     -webkit-box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
-            box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.08);
 }
 
 .single-special p {
@@ -657,6 +658,7 @@ p {
     color: #fff;
 }
 
+
 /* --------------------------
 :: 5.0 Features Area CSS
 -------------------------- */
@@ -665,11 +667,11 @@ p {
     margin-bottom: 50px;
 }
 
-.single-feature > p {
+.single-feature>p {
     margin-bottom: 0;
 }
 
-.single-feature > i {
+.single-feature>i {
     color: #fb397d;
     font-size: 30px;
     display: inline-block;
@@ -677,14 +679,15 @@ p {
     margin-right: 10px;
 }
 
-.single-feature > h5 {
+.single-feature>h5 {
     font-size: 22px;
     color: #5b32b4;
 }
 
-.single-feature > p {
+.single-feature>p {
     margin-top: 15px;
 }
+
 
 /* --------------------------
 :: 6.0 Video Area CSS
@@ -714,7 +717,6 @@ p {
     border-radius: 20px;
 }
 
-
 .video-area .video-play-btn a {
     width: 80px;
     height: 80px;
@@ -740,6 +742,7 @@ p {
     color: #fff;
 }
 
+
 /* --------------------------
 :: 7.0 Cool Facts Area CSS
 -------------------------- */
@@ -757,7 +760,6 @@ p {
     top: -100px;
 }
 
-
 .cool_facts_area:after {
     position: absolute;
     bottom: -100px;
@@ -769,7 +771,7 @@ p {
     content: ''
 }
 
-.cool-facts-content > i {
+.cool-facts-content>i {
     color: #ffffff;
     font-size: 36px;
 }
@@ -780,18 +782,19 @@ p {
     align-self: flex-end;
 }
 
-.counter-area > h3 {
+.counter-area>h3 {
     color: #ffffff;
     font-size: 60px;
     margin-bottom: 0;
     line-height: 1;
 }
 
-.cool-facts-content > p {
+.cool-facts-content>p {
     font-size: 18px;
     color: #ffffff;
     margin-bottom: 0;
 }
+
 
 /* --------------------------
 :: 8.0 Screenshots Area CSS
@@ -838,6 +841,7 @@ p {
     text-align: center;
 }
 
+
 /* --------------------------
 :: 9.0 Pricing Plan Area CSS
 -------------------------- */
@@ -858,11 +862,10 @@ p {
     border-radius: 30px 30px 0 0;
 }
 
-.single-price-plan .package-plan > h5 {
+.single-price-plan .package-plan>h5 {
     color: #5b32b4;
     font-size: 18px;
 }
-
 
 .single-price-plan .package-plan .ca-price h4 {
     color: #fb397d;
@@ -878,7 +881,7 @@ p {
     color: #fb397d;
 }
 
-.single-price-plan .plan-button > a {
+.single-price-plan .plan-button>a {
     background: #726a84;
     padding: 10px 0;
     border-bottom-right-radius: 30px;
@@ -891,59 +894,60 @@ p {
     transition-duration: 500ms;
 }
 
-.single-price-plan .package-description > p {
+.single-price-plan .package-description>p {
     margin-bottom: 0;
     line-height: 1;
     padding: 15px 0;
     border-bottom: 1px solid #ebebeb;
 }
 
-.single-price-plan .package-description > p:first-child {
+.single-price-plan .package-description>p:first-child {
     border-top: 1px solid #ebebeb;
 }
 
 .single-price-plan.active .package-plan,
-.single-price-plan.active .plan-button > a,
-.single-price-plan:hover .plan-button > a {
+.single-price-plan.active .plan-button>a,
+.single-price-plan:hover .plan-button>a {
     background-color: #a865e1;
 }
 
-.single-price-plan.active .package-plan .ca-price > h4,
-.single-price-plan.active .package-plan .ca-price > span,
-.single-price-plan.active .package-plan > h5,
-.single-price-plan.active .plan-button > a {
+.single-price-plan.active .package-plan .ca-price>h4,
+.single-price-plan.active .package-plan .ca-price>span,
+.single-price-plan.active .package-plan>h5,
+.single-price-plan.active .plan-button>a {
     color: #fff;
 }
+
 
 /* --------------------------
 :: 10.0 Testimonials Area CSS
 -------------------------- */
 
-.clients-feedback-area .client-name > h5 {
+.clients-feedback-area .client-name>h5 {
     color: #5b32b4;
     font-size: 22px;
     margin-top: 5px;
 }
 
-.clients-feedback-area .star-icon > i {
+.clients-feedback-area .star-icon>i {
     font-size: 18px;
     color: #f1b922;
 }
 
-.clients-feedback-area .client-description > p {
+.clients-feedback-area .client-description>p {
     max-width: 1010px;
     margin: auto;
     margin-bottom: 15px;
     font-size: 22px;
 }
 
-.clients-feedback-area .client > i {
+.clients-feedback-area .client>i {
     font-size: 48px;
     color: #897ceb;
     margin-bottom: 30px;
 }
 
-.clients-feedback-area .client-name > p {
+.clients-feedback-area .client-name>p {
     color: #b5aec4;
 }
 
@@ -991,7 +995,6 @@ p {
     height: 129px;
 }
 
-
 .clients-feedback-area .slick-slide img {
     display: block;
     width: 80px !important;
@@ -1028,6 +1031,7 @@ p {
     top: 0;
 }
 
+
 /* --------------------------
 :: 11.0 CTA Area CSS Start
 -------------------------- */
@@ -1041,17 +1045,17 @@ p {
     background: linear-gradient(to left, #7873ed, #a865e1);
 }
 
-.membership-description > h2 {
+.membership-description>h2 {
     color: #ffffff;
     font-size: 36px;
 }
 
-.membership-description > p {
+.membership-description>p {
     color: #ffffff;
     margin-bottom: 0;
 }
 
-.get-started-button > a {
+.get-started-button>a {
     background: #ffffff;
     height: 45px;
     min-width: 155px;
@@ -1063,7 +1067,7 @@ p {
     border-radius: 23px 23px 23px 0;
 }
 
-.get-started-button > a:hover {
+.get-started-button>a:hover {
     background: #5b32b4;
     color: #fff;
     -webkit-transition-duration: 500ms;
@@ -1074,6 +1078,7 @@ p {
 .get-started-button {
     text-align: right;
 }
+
 
 /* --------------------------
 :: 12.0 Team Area CSS Start
@@ -1090,12 +1095,12 @@ p {
     border-radius: 30px 30px 30px 0;
 }
 
-.member-text > h4 {
+.member-text>h4 {
     font-size: 22px;
     color: #5b32b4;
 }
 
-.member-text > p {
+.member-text>p {
     color: #b5aec4;
     margin-bottom: 0;
 }
@@ -1138,7 +1143,7 @@ p {
     justify-content: center;
 }
 
-.team-social-icon > a {
+.team-social-icon>a {
     font-size: 14px;
     color: #fff;
     background: #9a81d7;
@@ -1155,20 +1160,21 @@ p {
     margin-bottom: 50px;
 }
 
+
 /* --------------------------
 :: 13.0 Contact Area CSS Start
 -------------------------- */
 
-.address-text > p,
-.phone-text > p,
-.email-text > p {
+.address-text>p,
+.phone-text>p,
+.email-text>p {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.address-text > p > span,
-.phone-text > p > span,
-.email-text > p > span {
+.address-text>p>span,
+.phone-text>p>span,
+.email-text>p>span {
     color: #5b32b4;
 }
 
@@ -1176,7 +1182,7 @@ p {
     margin-left: 0;
 }
 
-.footer-contact-area .heading-text > p {
+.footer-contact-area .heading-text>p {
     margin-top: 50px;
 }
 
@@ -1221,21 +1227,22 @@ p {
     background: #f5f9fc;
 }
 
-.footer-text > p {
+.footer-text>p {
     margin-bottom: 50px;
 }
+
 
 /* --------------------------
 :: 14.0 Footer Area CSS Start
 -------------------------- */
 
-.footer-text > h2 {
+.footer-text>h2 {
     color: #5b32b4;
     font-size: 72px;
     font-weight: 700;
 }
 
-.footer-social-icon > a > i {
+.footer-social-icon>a>i {
     background: #9b69e4;
     font-size: 14px;
     color: #ffffff;
@@ -1247,7 +1254,7 @@ p {
     margin-right: 10px;
 }
 
-.footer-social-icon > a > i:hover {
+.footer-social-icon>a>i:hover {
     background: #fb397d;
     color: #fff;
     -webkit-transition-duration: 500ms;
@@ -1274,7 +1281,7 @@ p {
     color: #726a84;
 }
 
-.footer-social-icon > a .active {
+.footer-social-icon>a .active {
     background: #fb397d;
 }
 
@@ -1290,6 +1297,6 @@ p {
     margin-bottom: 15px;
 }
 
-.copyright-text > p {
+.copyright-text>p {
     margin-bottom: 0;
 }
