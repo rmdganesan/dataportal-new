@@ -35,7 +35,9 @@ require([
         }],
         yAxis: [{
             type: 'value',
-            show: false
+            axisLabel: {
+                show: false
+            }
 
         }],
         series: [{

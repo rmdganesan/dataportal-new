@@ -454,9 +454,9 @@ $('#world-map-markers').vectorMap({
                         );
                     },
                     onMarkerTipShow: function (e, el, index) {
-                        //alert(code);
-                        el.html(el.html() + data.countries.names[index] + " " + data.countries
-                            .production[val][index] + " (k) bbl/d ");
+                         var x = data.countries.production[val][index]+"";                       
+                         x = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                        el.html(el.html() + data.countries.names[index] + " " + x + " (k) bbl/d ");
                     },
                     onRegionLabelShow: function (event, label, code) {
                         alert(data.world[val][code]);
