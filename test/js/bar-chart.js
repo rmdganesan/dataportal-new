@@ -63,7 +63,7 @@ require([
                 show: false
             },
             axisLine: {
-                show: false
+                show: true
             },
             z: 10
         },
@@ -86,15 +86,15 @@ require([
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: '#83bff6'
+                                    color: '#7cd6d2'
                                 },
                                 {
                                     offset: 0.5,
-                                    color: '#188df0'
+                                    color: '#61adaa'
                                 },
                                 {
                                     offset: 1,
-                                    color: '#188df0'
+                                    color: '#61adaa'
                                 }
                             ]
                         )
@@ -103,15 +103,15 @@ require([
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1, [{
                                     offset: 0,
-                                    color: '#2378f7'
+                                    color: '#7cd6d2'
                                 },
                                 {
                                     offset: 0.7,
-                                    color: '#2378f7'
+                                    color: '#7cd6d2'
                                 },
                                 {
                                     offset: 1,
-                                    color: '#83bff6'
+                                    color: '#7cd6d2'
                                 }
                             ]
                         )
@@ -138,7 +138,6 @@ require([
 function changeBarChart(yearIndex) {
 
     option_info = bar_chart.getOption();
-    debugger;
     data = option_info.series[0].data;
     yMax = Math.max.apply(null, production[yearIndex]);
     dataShadow = [];
@@ -148,7 +147,6 @@ function changeBarChart(yearIndex) {
     option_info.yAxis[0].data = country[yearIndex];
     option_info.series[0].data = dataShadow;
     option_info.series[1].data = production[yearIndex];
-    console.log(production[yearIndex]);
     option_info.title[0].text = month_year[yearIndex].year + ' ' + month_year[yearIndex].month + '  - Top 10 Production country';
     // alert(country[yearIndex] + '  ' + production[yearIndex]);
     bar_chart.setOption(option_info, true);

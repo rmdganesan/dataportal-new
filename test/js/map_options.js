@@ -11,7 +11,6 @@
      /// debugger;
 
      $('#button_play').click(function() {
-         alert(state);
          if (state == 'pause') {
              state = 'play';
              $(this).find("i").attr('class', "fa fa-pause");
