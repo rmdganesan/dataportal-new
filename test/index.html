@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>KAPSARC : - Dataportal</title>
     <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" media="all" href="jquery-jvectormap-2.0.3.css" />
     <link rel="stylesheet" media="all" href="jquery-ui.min.css" />
 
@@ -41,6 +42,42 @@
 </head>
 
 <body>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+            <div class="modal-header" style="display: inline; background-color: #f0ad4e;border-color: #eea236;" >
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="text-align: center; color:#fff">Source of Data</h4>
+            </div>
+            <div class="modal-body">
+                <h5 style="text-align: center;">Oil Production</h5>
+                <ul>
+	                <li><i class="fas fa-chevron-circle-right"></i>  <a href="https://www.eia.gov/totalenergy/data/browser/?tbl=T11.01A#/?f=M&start=198001&end=201808&charted=13" > EIA data for monthly oil production OPEC countries. </a> </li>
+	                <li><i class="fas fa-chevron-circle-right"></i>  <a href="https://www.eia.gov/totalenergy/data/browser/?tbl=T11.01B#/?f=M&start=198001&end=201808&charted=0-11-12" > EIA data for monthly oil production non-OPEC countries plus world oil output. </a> </li>
+	                <li><i class="fas fa-chevron-circle-right"></i>  <a href="ttp://pubdocs.worldbank.org/en/561011486076393416/CMO-Historical-Data-Monthly.xlsx" > World Bank data for Brent monthly prices nominal (US $). </a> </li>
+                </ul>
+                <h5 style="text-align: center;">Forecast</h5>
+                <ul>
+                	<li><i class="fas fa-chevron-circle-right"></i>  <a href="https://www.imf.org/external/pubs/ft/weo/2018/02/weodata/weorept.aspx?sy=1980&ey=2023&scsm=1&ssd=1&sort=country&ds=.&br=1&pr1.x=73&pr1.y=11&c=001%2C110%2C163%2C119%2C123%2C998%2C200%2C901%2C505%2C511%2C903%2C205%2C440%2C406" > IMF Forecast. </a>  </li>
+                	<li><i class="fas fa-chevron-circle-right"></i>  <a href="https://www.eia.gov/outlooks/aeo/data/browser/#/?id=19-AEO2018&cases=ref2018&sourcekey=0" > EIA Forecast (High, Low, Reference) . </a> </li>
+                	<li><i class="fas fa-chevron-circle-right"></i>  <a href=" http://pubdocs.worldbank.org/en/823461540394173663/CMO-October-2018-Forecasts.pdf" >World Bank Forecast (average price of Brent, Dubai and West Texas Intermediate, equally weighed). </a>  </li>
+            	</ul>
+            	<h5 style="text-align: center;">News Agency</h5>
+            	AP= Associated Press<br>
+				DJ= Dow Jones<br>
+				WP= Woshington Post<br>
+				IOL= Independent Online<br>
+				NYT= The New York Times<br>
+				WT= Washington Times<br>
+				WCBD= NBC-affiliated television station<br>
+				WSJ= Wall Street Journal<br>
+				IMF= International Monetary Fund<br>
+            </div>
+      </div>
+    </div>
+  </div>
+
     <!-- Preloader Start -->
     <div id="preloader">
         <div class="colorlib-load"></div>
@@ -75,7 +112,7 @@
     </section -->
     <!-- ***** Special Area End ***** -->
     <!-- ***** Awesome Features Start ***** -->
-    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="features" style ="padding-bottom: 0px;">
+    <section class="awesome-feature-area bg-white section_padding_0_50 clearfix" id="features" style="padding-bottom:0px">
         <div class="container" style="max-width:100%;">
             <div class="row" style="left:-20px">
                 <div class="col-12 col-sm-6 col-lg-9 ">
@@ -100,15 +137,15 @@
                     </div>
                     <div class="col-12" id="bar-chart" style="height: 50%;"></div>
                     <nav class="navbar   navbar-light" style="background-color: #f39c12 !important; color:#fff">
-                        <a style="display: block;font-weight: bold;font-size: 18px;"> <span class='year_name'>1980</span> - Top Event</a>
+                        <a style="display: block;font-weight: bold;font-size: 18px;"> <span class='year_name'>1980</span> - Major Events</a>
                     </nav>
-                    <div class="col-12" style="height:30%;     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important; overflow: auto; ">
+                    <div class="col-12" style="height:30%;     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important; overflow: auto; font-size: 14px;">
                         
                         <ul class="list-group list-group-flush" id="marquee-vertical" >
-                            <li class="list-group-item">Saudi Aramco reverts to state ownership</li>
-  <li class="list-group-item">Supply shock</li>
-  <li class="list-group-item">Collapse of OPEC's  pricing structure</li>
-  <li class="list-group-item">Iran Iraq war</li>
+                            <li class="list-group-item"><i class="fas fa-chevron-circle-right"></i> <a href="https://en.wikipedia.org/wiki/Chronology_of_world_oil_market_events#1980">Windfall Profits Tax enacted</a></li>
+  <li class="list-group-item"><i class="fas fa-chevron-circle-right"></i> <a href="https://en.wikipedia.org/wiki/Chronology_of_world_oil_market_events#1980">Saudi Light raised to $28/bbld</a> </li>
+  <li class="list-group-item"><i class="fas fa-chevron-circle-right"></i> <a href="https://en.wikipedia.org/wiki/Chronology_of_world_oil_market_events#1980">Collapse of OPEC pricing structure</a></li>
+  <li class="list-group-item"><i class="fas fa-chevron-circle-right"></i> <a href="https://en.wikipedia.org/wiki/Chronology_of_world_oil_market_events#1980">Iran Iraq war</a></li>
                         </ul>
 
 
@@ -160,7 +197,7 @@
 
                 <div class="col-3">
                      <nav class="navbar   navbar-light" style="background-color: #0073b7 !important; color:#fff">
-                        <a style="display: block;font-weight: bold;font-size: 18px;"> Foreast($/bbl)</a>
+                        <a style="display: block;font-weight: bold;font-size: 18px;"> Forecast ($/bbl)</a>
                     </nav>
                     <div id="forecast" style="height: 350px;">
                     </div>
@@ -213,18 +250,17 @@
         </div>
     </section -->
 
-<div class="row">                       
-    <div class="col-1">
+<div class="row">   
+                
+    <div class="col-1" style="top: -5px;">
             <div class="player text-left" style="white-space: nowrap;" >
-                <button type="button" id="button_first" class="btn" style="cursor: pointer; color: #fff;background-color: #337ab7;border-color: #2e6da4;">
-                    <i class="fa fa-fast-backward" style="cursor: pointer;"></i>
+                <button type="button"   data-placement="top"   title="Source Information" id="button_first__" class="btn" data-toggle="modal" data-target="#myModal" style="margin-left: 50%; cursor: pointer; color: #fff;background-color: #f0ad4e;border-color: #eea236;">
+                    <i class="fas fa-info-circle" style="cursor: pointer;"></i>
                 </button>
-                <button type="button" id="button_play" class="btn" style="cursor: pointer; color: #fff;background-color: #5cb85c;border-color: #4cae4c;">
+                <button type="button" data-toggle="tooltip" data-placement="top"  title="Play / Pause" id="button_play" class="btn" style="cursor: pointer; color: #fff;background-color: #5cb85c;border-color: #4cae4c;">
                     <i class="fa fa-play" style="cursor: pointer;"></i>
                 </button>
-                <button type="button" id="button_last" class="btn" style="cursor: pointer; color: #fff;background-color: #337ab7;border-color: #2e6da4;">
-                    <i class="fa fa-fast-forward" style="cursor: pointer;"></i>
-                </button>
+                
             </div>
     </div>
     <div class="col-8">
@@ -234,6 +270,7 @@
     </div>
    
 </div>
+
 
 
     <section class="footer-contact-area section_padding_100 clearfix" id="contact" style="display:none">
@@ -378,6 +415,9 @@
 <script>
 
     $(function () {
+    	 $('[data-toggle="tooltip"]').tooltip(); 
+    	 $('[data-toggle="modal"]').tooltip(); 
+
         $.getJSON('data_oil.json', function (data) {
             var val = 1;
             worldValues = jvm.values.apply({}, jvm.values(data.world)),

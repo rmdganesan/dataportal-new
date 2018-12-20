@@ -19,7 +19,7 @@ require([
             }
         },
         legend: {
-            data: ['EIA Low', 'IMF', 'EIA', 'WEO 2018', 'World Bank', 'EIA High', ]
+            data: ['EIA Low', 'EIA', 'IMF WEO 2018', 'World Bank', 'EIA High', ]
         },
 
         grid: {
@@ -46,14 +46,7 @@ require([
                 stack: '总量',
                 areaStyle: {},
                 data: [27.7, 30.7, 33.3, 37, 38, 39.3, 40.5, 41.5]
-            },
-            {
-                name: 'IMF',
-                type: 'line',
-                stack: '总量',
-                areaStyle: {},
-                data: [50, 51.9, 53.5, 55, 56.5]
-            },
+            },          
             {
                 name: 'EIA',
                 type: 'line',
@@ -62,7 +55,7 @@ require([
                 data: [54.1, 58.8, 75.1, 85.1, 90.7, 95.8, 99.9, 103.7]
             },
             {
-                name: 'WEO 2018',
+                name: 'IMF WEO 2018',
                 type: 'line',
                 stack: '总量',
                 areaStyle: {},
