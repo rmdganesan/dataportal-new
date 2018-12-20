@@ -79,8 +79,8 @@
   </div>
 
     <!-- Preloader Start -->
-    <div id="preloader">
-        <div class="colorlib-load"></div>
+    <div id="preloader" style="display:none;">
+        <div class="colorlib-load" style="display:none;"></div>
     </div>
 
     <!-- ***** Wellcome Area End ***** -->
@@ -188,8 +188,14 @@
                         </div>
                     </div>
             </div -->
+            <div style="width: 75%;height: 50px; float:right; position: absolute;text-align: right;padding-right: 2%;"> 
+             <div id="oildata-text" style="width: 40%;float: right;"> 
+             World output (kbbl/d):62348 ; Saudi Arabia (kbbl/d): 9767;Price ($/bbl):40.00 
+             </div>
+             </div>
             <div class="row">
                 <div class="col-9">
+                   
                     <!-- Heading Text -->
                     <div id="oildata" style="height: 400px; width:100%">
                     </div>
@@ -503,6 +509,7 @@ change:function(event, ui) {
                             changePriceLineChart(val-1);
                             updateyearMonth(val-1);
                             updateEvent(val-1);
+                            displayprice(val);
 
  }
             });
@@ -522,17 +529,13 @@ change:function(event, ui) {
 
     $(function () {
         // $('#marquee-horizontal').marquee({direction:'horizontal', delay:0, timing:50});  
-
         //$('#marquee-vertical').marquee( {timing: 5000000} );
-
         $("#play ").click(function () {
             //alert(map.series.markers[0].values[0]);					 
             $.each(dateArray, function (i, m) {
-
                 setTimeout(function () {
                     var a = eval(m);
                     oilProd_1 = a;
-
                     var b = eval(circleArray[i]);
                     y1980_1 = b;
                 }, 500 * i);
